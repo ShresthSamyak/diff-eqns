@@ -1,121 +1,40 @@
-# Cauchy–Euler Differential Equations
+# Cauchy-Euler Method: Operational Guide
 
-## 1. Definition
+## 1. Identification
+[cite_start]A differential equation is a Cauchy-Euler (equidimensional) equation if the power of $x$ matches the order of the derivative[cite: 25]:
+$$x^2 \frac{d^2y}{dx^2} + a x \frac{dy}{dx} + b y = f(x)$$
 
-A **Cauchy–Euler equation** (also called **Equidimensional equation**) is a differential equation of the form:
+## 2. Transformation (Change of Variables)
+To convert the equation into one with constant coefficients, use the substitution:
+- [cite_start]$x = e^z$ or $z = \ln(x)$ [cite: 25]
+- Define the operator $D = \frac{d}{dz}$
 
-$$x^2 y'' + a x y' + b y = f(x)$$
+### Derivative Replacements:
+- $x \frac{dy}{dx} = Dy$
+- $x^2 \frac{d^2y}{dx^2} = D(D-1)y$
+- $x^3 \frac{d^3y}{dx^3} = D(D-1)(D-2)y$
 
-or in homogeneous form:
+## 3. The Characteristic Equation
+For the homogeneous part, substitute $y = x^m$ or use the transformed operator equation:
+$$m(m-1) + am + b = 0 \implies m^2 + (a-1)m + b = 0$$
 
-$$x^2 y'' + a x y' + b y = 0$$
-
-where $a$ and $b$ are constants.
-
-**Key characteristic:**
-- Coefficient of $y''$ $\rightarrow$ $x^2$
-- Coefficient of $y'$ $\rightarrow$ $x$
-
----
-
-## 2. Standard Form
-
-General Cauchy–Euler equation:
-$$x^2 y'' + a x y' + b y = 0$$
-
-Divide by $x^2$:
-$$y'' + \frac{a}{x}y' + \frac{b}{x^2}y = 0$$
-
----
-
-## 3. Trial Solution
-
-Assume a solution of the form:
-$$y = x^m$$
-
-Then:
-$$y' = m x^{m-1}$$
-$$y'' = m(m-1)x^{m-2}$$
-
----
-
-## 4. Substitution
-
-Substitute into the equation:
-$$x^2[m(m-1)x^{m-2}] + ax[mx^{m-1}] + b x^m = 0$$
-
-Simplify:
-$$x^m[m(m-1) + am + b] = 0$$
-
----
-
-## 5. Auxiliary (Indicial) Equation
-
-$$m(m-1) + am + b = 0$$
-
-or
-
-$$m^2 + (a-1)m + b = 0$$
-
-Solve for $m$.
-
----
-
-## 6. Cases of Roots
-
-### Case 1: Distinct Real Roots
-If $m_1 \neq m_2$, then:
-$$y = C_1 x^{m_1} + C_2 x^{m_2}$$
-
----
-
-### Case 2: Repeated Root
-If $m_1 = m_2 = m$, then:
-$$y = C_1 x^m + C_2 x^m \ln x$$
-
----
-
-### Case 3: Complex Roots
-If $m = \alpha \pm i\beta$, then:
-$$y = x^\alpha [C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)]$$
-
----
-
-## 7. Alternative Method (Change of Variable)
-
-Sometimes we use the substitution:
-$$x = e^t \quad \text{or} \quad t = \ln x$$
-
-This converts the Cauchy–Euler equation into a **constant-coefficient differential equation**.
-
-**Steps:**
-1. Let $x = e^t$
-2. Convert derivatives using chain rule
-3. Solve resulting linear equation
-
----
-
-## 8. Quick Recognition Trick
-
-An equation is Cauchy–Euler if:
-
-| Term | Pattern |
+### Case Analysis for Roots ($m$):
+| Root Type | Homogeneous Solution ($y_c$) |
 | :--- | :--- |
-| $y''$ coefficient | $x^2$ |
-| $y'$ coefficient | $x$ |
-| $y$ coefficient | constant |
+| **Distinct Real** ($m_1, m_2$) | $y_c = C_1 x^{m_1} + C_2 x^{m_2}$ |
+| **Repeated Real** ($m_1 = m_2$) | $y_c = C_1 x^m + C_2 x^m \ln(x)$ |
+| **Complex** ($\alpha \pm i\beta$) | $y_c = x^\alpha [C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)]$ |
 
-**Example:**
-$$x^2y'' - 3xy' + 4y = 0$$
+## 4. Particular Integral ($y_p$) via Operator Method
+Once transformed into the $z$-domain, find $y_p$ using inverse operators:
+$$y_p = \frac{1}{f(D)} f(e^z)$$
 
----
+**Common Shortcuts:**
+- **Exponential:** If $f(z) = e^{az}$, replace $D$ with $a$.
+- **Trig:** If $f(z) = \sin(az)$, replace $D^2$ with $-a^2$.
+- **Polynomial:** If $f(z) = z^n$, use Binomial expansion $(1 + g(D))^{-1}$.
 
-## 9. Summary
-
-**Steps to solve:**
-1. Identify equation as Cauchy–Euler.
-2. Assume solution $y = x^m$.
-3. Compute $y'$ and $y''$.
-4. Substitute into equation.
-5. Solve auxiliary equation.
-6. Write general solution based on root type.
+## 5. Back-Substitution
+[cite_start]Always convert your final result from the $z$-domain back to the $x$-domain[cite: 25]:
+- [cite_start]Replace $z$ with $\ln(x)$ [cite: 25]
+- [cite_start]Replace $e^z$ with $x$ [cite: 25]
