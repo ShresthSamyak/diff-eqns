@@ -1,134 +1,62 @@
-# Examples — Cauchy–Euler Differential Equations
+# Examples — Cauchy–Euler via Operator Method
 
-A **Cauchy–Euler equation** has the form:
-$$x^2y'' + axy' + by = f(x)$$
-
-Key substitution used to convert it into a constant coefficient equation:
-$$x = e^t \quad \text{or} \quad t = \ln x$$
-
-Then derivatives transform as:
-$$\frac{dy}{dx} = \frac{1}{x} \frac{dy}{dt}$$
-$$\frac{d^2y}{dx^2} = \frac{1}{x^2} \left( \frac{d^2y}{dt^2} - \frac{dy}{dt} \right)$$
-
-After substitution, the equation becomes a **linear constant coefficient equation in $t$**.
+## Core Substitution
+[cite_start]For all examples, let $x = e^z$ or $z = \ln x$[cite: 25].
+The operators transform as:
+- $x y' = Dy$
+- $x^2 y'' = D(D-1)y$
+[cite_start]where $D = \frac{d}{dz}$[cite: 26].
 
 ---
 
-## Example 1 — Conceptual Example
+## Example 4 — Non-Homogeneous (Linear RHS)
+**Problem:** $x^2y'' + xy' - y = 24x$
 
-Solve:
-$$x^2y'' - 2y = 0$$
+### Step 1 — Operator Transformation
+$$[D(D-1) + D - 1]y = 24e^z$$
+$$(D^2 - 1)y = 24e^z$$
 
-### Step 1 — Assume solution
-For Cauchy–Euler equations, assume:
-$$y = x^m$$
+### Step 2 — Homogeneous Solution ($y_c$)
+$m^2 - 1 = 0 \implies m = \pm 1$
+$$y_c = C_1e^z + C_2e^{-z} = C_1x + C_2x^{-1}$$
 
-### Step 2 — Derivatives
-$$y' = m x^{m-1}$$
-$$y'' = m(m-1)x^{m-2}$$
-
-### Step 3 — Substitute
-$$x^2[m(m-1)x^{m-2}] - 2x^m = 0$$
-$$m(m-1)x^m - 2x^m = 0$$
-$$x^m[m(m-1) - 2] = 0$$
-
-### Step 4 — Auxiliary equation
-$$m(m-1) - 2 = 0$$
-$$m^2 - m - 2 = 0$$
-$$(m-2)(m+1) = 0 \implies m = 2, -1$$
-
-### Final solution
-$$y = C_1x^2 + C_2x^{-1}$$
+### Step 3 — Particular Integral ($y_p$) via Operator Method
+$$y_p = \frac{1}{D^2 - 1} 24e^z$$
+Since $D=1$ makes the denominator zero (Case of Failure), use the $xe^{ax}$ rule:
+$$y_p = 24 \cdot \frac{z}{2D} e^z = 24 \cdot \frac{z e^z}{2} = 12z e^z$$
+**Back-substituting:** $y_p = 12x \ln x$
 
 ---
 
-## Example 2 — Moderate Example
+## Example 5 — Non-Homogeneous (Logarithmic RHS)
+**Problem:** $x^2y'' - xy' - y = \ln x$
 
-Solve:
-$$x^2y'' + xy' + 4y = 0$$
+### Step 1 — Operator Transformation
+$$[D(D-1) - D - 1]y = z$$
+$$(D^2 - 2D - 1)y = z$$
 
-### Step 1 — Assume
-$$y = x^m$$
-
-### Step 2 — Substitute
-$$m(m-1)x^m + m x^m + 4x^m = 0$$
-$$x^m[m^2 + 4] = 0$$
-
-### Step 3 — Roots
-$$m^2 + 4 = 0 \implies m = \pm 2i$$
-
-### Final solution
-$$y = C_1 \cos(2 \ln x) + C_2 \sin(2 \ln x)$$
-
----
-
-## Example 3 — Hard Example
-
-Solve:
-$$x^2y'' - 3xy' - 2y = 0$$
-
-### Step 1 — Assume
-$$y = x^m$$
-
-### Step 2 — Substitute
-$$m(m-1)x^m - 3m x^m - 2x^m = 0$$
-
-### Step 3 — Simplify
-$$m^2 - m - 3m - 2 = 0$$
-$$m^2 - 4m - 2 = 0$$
-
-### Step 4 — Roots
-$$m = \frac{4 \pm \sqrt{16 - 4(1)(-2)}}{2} = 2 \pm \sqrt{6}$$
-
-### Final solution
-$$y = C_1 x^{2+\sqrt{6}} + C_2 x^{2-\sqrt{6}}$$
-
----
-
-## Example 4 — Required Question
-
-Solve:
-$$x^2y'' + xy' - y = 24x$$
-
-### Step 1 — Homogeneous equation
-$$x^2y'' + xy' - y = 0$$
-Assume $y = x^m \implies m(m-1) + m - 1 = 0 \implies m^2 - 1 = 0 \implies m = \pm 1$
-
-**Complementary solution:**
-$$y_c = C_1x + \frac{C_2}{x}$$
-
-### Step 2 — Particular solution
-RHS = $24x$. Since $x$ is already in $y_c$, try:
-$$y_p = Ax \ln x$$
-
-After simplification:
-$$A = 12$$
-
-### Final solution
-$$y = C_1x + \frac{C_2}{x} + 12x \ln x$$
-
----
-
-## Example 5 — Required Question
-
-Solve:
-$$x^2y'' - xy' - y = \ln x$$
-
-### Step 1 — Homogeneous equation
-Assume $y = x^m \implies m(m-1) - m - 1 = 0 \implies m^2 - 2m - 1 = 0$
-
-**Roots:**
-$$m = 1 \pm \sqrt{2}$$
-
-**Complementary solution:**
+### Step 2 — Homogeneous Solution ($y_c$)
+$m^2 - 2m - 1 = 0 \implies m = 1 \pm \sqrt{2}$
 $$y_c = C_1 x^{1+\sqrt{2}} + C_2 x^{1-\sqrt{2}}$$
 
-### Step 2 — Particular solution
-Use substitution $t = \ln x$. 
-This converts the equation into a **constant coefficient differential equation in $t$**:
-$$\frac{d^2y}{dt^2} - 2\frac{dy}{dt} - y = t$$
+### Step 3 — Particular Integral ($y_p$) via Binomial Expansion
+For polynomial $z$, factor out the constant $(-1)$:
+$$y_p = \frac{1}{-1(1 + 2D - D^2)} z = -(1 + (2D - D^2))^{-1} z$$
+Expand as $(1+X)^{-1} \approx 1 - X$:
+$$y_p = -[1 - 2D]z = -(z - 2) = 2 - z$$
+**Back-substituting:** $y_p = 2 - \ln x$
 
-Solve the resulting equation and substitute back.
+---
 
-### Final solution
-$$y = C_1 x^{1+\sqrt{2}} + C_2 x^{1-\sqrt{2}} + (\text{particular term involving } \ln x)$$
+## [cite_start]Exam Practice — Question 3(a) [cite: 24, 25]
+[cite_start]**Problem:** $x^2y'' + xy' + 4y = 2x \ln x$ [cite: 25]
+
+### Step 1 — Operator Transformation
+$$(D^2 + 4)y = 2ze^z$$
+
+### Step 2 — Particular Integral ($y_p$) via Exponential Shift
+Shift $e^z$ out by replacing $D$ with $D+1$:
+$$y_p = 2e^z \left[ \frac{1}{(D+1)^2 + 4} \right] z = 2e^z \left[ \frac{1}{D^2 + 2D + 5} \right] z$$
+Factor out $5$ for Binomial Expansion:
+$$y_p = \frac{2e^z}{5} [1 - \frac{2D}{5}]z = \frac{2e^z}{5}(z - \frac{2}{5})$$
+[cite_start]**Back-substituting:** $y_p = \frac{2x \ln x}{5} - \frac{4x}{25}$ [cite: 27]
