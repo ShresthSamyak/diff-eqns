@@ -8,7 +8,7 @@ $$
 y'' + P(x)y' + Q(x)y = 0
 $$
 
-where one solution \(y_1(x)\) is given.
+where one solution **y₁(x)** is given.
 
 ---
 
@@ -17,9 +17,9 @@ where one solution \(y_1(x)\) is given.
 Given:
 
 - Differential equation
-- One solution \(y_1(x)\)
+- One solution **y₁(x)**
 
-Find the **second solution \(y_2(x)\)**.
+Find the **second solution y₂(x)**.
 
 ---
 
@@ -43,7 +43,7 @@ $$
 y'' + P(x)y' + Q(x)y = 0
 $$
 
-If the equation is not in this form, divide by the coefficient of \(y''\).
+If the equation is not in this form, divide by the coefficient of **y''**.
 
 ---
 
@@ -51,8 +51,8 @@ If the equation is not in this form, divide by the coefficient of \(y''\).
 
 From the equation determine:
 
-- \(P(x)\)
-- given solution \(y_1(x)\)
+- **P(x)**
+- given solution **y₁(x)**
 
 ---
 
@@ -86,13 +86,7 @@ Simplify the integrand before integrating.
 
 ## Step 5 — Obtain the second solution
 
-After integration:
-
-$$
-y_2(x)
-$$
-
-will be the **second linearly independent solution**.
+After integration, **y₂(x)** will be the **second linearly independent solution**.
 
 ---
 
@@ -110,13 +104,13 @@ $$
 
 Use this method when:
 
-- One solution \(y_1\) is already given
+- One solution **y₁** is already given
 - Equation is second order
 - The equation is homogeneous
 
 Example situation:
 
-> "If \(y_1 = x\) is a solution of the equation, find the general solution."
+> "If **y₁ = x** is a solution of the equation, find the general solution."
 
 ---
 
