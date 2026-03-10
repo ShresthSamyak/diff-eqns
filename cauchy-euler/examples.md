@@ -202,7 +202,7 @@ $$\boxed{y_c = C_1 \cos(2\ln x) + C_2 \sin(2\ln x)}$$
 
 ---
 
-### Step 3 — Particular Integral $y_p$ (Exponential Shift + Binomial)
+### Step 3 — Particular Integral $y_p$ (Exponential Shift + Undetermined Coefficients)
 
 Apply the inverse operator:
 
@@ -212,17 +212,38 @@ $$y_p = \frac{1}{D^2 + 4}\,2ze^z$$
 
 $$y_p = 2e^z \cdot \frac{1}{(D+1)^2 + 4}\,z = 2e^z \cdot \frac{1}{D^2 + 2D + 5}\,z$$
 
-**Binomial Expansion:** Factor out $5$ from the denominator:
+Let $Y = \dfrac{1}{D^2 + 2D + 5}(z)$, so that:
 
-$$y_p = \frac{2e^z}{5} \cdot \frac{1}{1 + \frac{2D + D^2}{5}}\,z$$
+$$(D^2 + 2D + 5)\,Y = z$$
 
-Expand $(1 + X)^{-1} \approx 1 - X$ (truncate at $D^1$ since $z$ is degree 1):
+**Assume a polynomial solution** of degree 1 (matching the degree of the RHS):
 
-$$y_p = \frac{2e^z}{5}\left[1 - \frac{2D}{5}\right] z$$
+$$Y = Az + B$$
 
-Apply the operators ($Dz = 1$):
+Compute derivatives:
 
-$$y_p = \frac{2e^z}{5}\left(z - \frac{2}{5}\right)$$
+$$Y' = A, \qquad Y'' = 0$$
+
+Substitute into the equation:
+
+$$(D^2 + 2D + 5)(Az + B) = z$$
+
+$$0 + 2A + 5(Az + B) = z$$
+
+**Compare coefficients:**
+
+For $z$:
+$$5A = 1 \implies A = \frac{1}{5}$$
+
+Constant:
+$$2A + 5B = 0 \implies 2\!(\frac{1}{5}) + 5B = 0 \implies 5B = -\frac{2}{5} \implies B = -\frac{2}{25}$$
+
+Therefore:
+
+$$Y = \frac{z}{5} - \frac{2}{25}$$
+
+So:
+$$y_p = 2e^z\left(\frac{z}{5} - \frac{2}{25}\right)$$
 
 Back-substituting $z = \ln x$ and $e^z = x$:
 
