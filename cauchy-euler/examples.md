@@ -53,7 +53,7 @@ $$(D^2 - 1)\,y = 24e^z$$
 
 Solve the auxiliary (characteristic) equation by setting the right-hand side to zero:
 
-$$m^2 - 1 = 0 \implies (m-1)(m+1) = 0 \implies m = +1,\; -1$$
+$$m^2 - 1 = 0 \implies (m-1)(m+1) = 0 \implies m = +1,\, -1$$
 
 Two real distinct roots give:
 
@@ -139,7 +139,7 @@ $$y_p = \frac{1}{D^2 - 2D - 1}\, z$$
 
 Rewrite the denominator by factoring out $-1$:
 
-y_p = \frac{-1}{1 + 2D - D^2}\, z = -(1 + (2D - D^2))^{-1} z
+$$y_p = \frac{-1}{1 + 2D - D^2}\, z = -(1 + (2D - D^2))^{-1} z$$
 
 Expand using $(1 + X)^{-1} \approx 1 - X + \cdots$ (truncate after $D^1$ since $z$ is degree 1):
 
@@ -163,7 +163,7 @@ $$y = y_c + y_p = C_1\, x^{1+\sqrt{2}} + C_2\, x^{1-\sqrt{2}} + 2 - \ln x$$
 
 ---
 
-## Exam Practice — Question 3(a)
+## Example 6 — Non-Homogeneous Equation (Exponential Shift + Binomial, Complex Roots)
 
 **Problem:**
 $$x^2 y'' + x y' + 4y = 2x \ln x$$
@@ -224,7 +224,7 @@ Apply the operators ($Dz = 1$):
 
 $$y_p = \frac{2e^z}{5}\left(z - \frac{2}{5}\right)$$
 
-Back-substituting $z = \ln x$:
+Back-substituting $z = \ln x$ and $e^z = x$:
 
 $$\boxed{y_p = \frac{2x\ln x}{5} - \frac{4x}{25}}$$
 
