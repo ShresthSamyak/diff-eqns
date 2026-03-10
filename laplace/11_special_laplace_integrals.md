@@ -31,9 +31,7 @@ $$
 One important result is
 
 $$
-\int_0^\infty \frac{\cos(at)-\cos(bt)}{t}dt
-=
-\ln\left(\frac{b}{a}\right)
+\int_0^\infty \frac{\cos(at)-\cos(bt)}{t}\,dt = \ln\left(\frac{b}{a}\right)
 $$
 
 This identity appears when applying the property
@@ -49,15 +47,13 @@ $$
 Evaluate
 
 $$
-\int_0^\infty \frac{\cos 6t - \cos 4t}{t}dt
+\int_0^\infty \frac{\cos 6t - \cos 4t}{t}\,dt
 $$
 
 Compare with
 
 $$
-\int_0^\infty \frac{\cos(at)-\cos(bt)}{t}dt
-=
-\ln\left(\frac{b}{a}\right)
+\int_0^\infty \frac{\cos(at)-\cos(bt)}{t}\,dt = \ln\left(\frac{b}{a}\right)
 $$
 
 Here
@@ -69,11 +65,7 @@ $$
 Result
 
 $$
-= \ln\left(\frac{4}{6}\right)
-$$
-
-$$
-= \ln\left(\frac{2}{3}\right)
+= \ln\left(\frac{4}{6}\right) = \ln\left(\frac{2}{3}\right)
 $$
 
 ---
@@ -83,9 +75,7 @@ $$
 Another useful identity is
 
 $$
-\int_0^\infty \frac{\sin(at)}{t}dt
-=
-\frac{\pi}{2}
+\int_0^\infty \frac{\sin(at)}{t}\,dt = \frac{\pi}{2}
 $$
 
 for $a>0$.
@@ -97,13 +87,13 @@ for $a>0$.
 Evaluate
 
 $$
-\int_0^\infty \frac{\sin 3t}{t}dt
+\int_0^\infty \frac{\sin 3t}{t}\,dt
 $$
 
 Using the identity
 
 $$
-\int_0^\infty \frac{\sin(at)}{t}dt = \frac{\pi}{2}
+\int_0^\infty \frac{\sin(at)}{t}\,dt = \frac{\pi}{2}
 $$
 
 Result
@@ -131,20 +121,13 @@ $$
 Step 2: Use Laplace transform
 
 $$
-L\{f(t)\}
-=
-\frac{2(s+3)}{((s+3)^2+1)^2}
+L\{f(t)\} = \frac{2(s+3)}{((s+3)^2+1)^2}
 $$
 
 Step 3: Substitute $s=0$
 
 $$
-=
-\frac{2(3)}{(9+1)^2}
-=
-\frac{6}{100}
-=
-\frac{3}{50}
+= \frac{2(3)}{(9+1)^2} = \frac{6}{100} = \frac{3}{50}
 $$
 
 ---

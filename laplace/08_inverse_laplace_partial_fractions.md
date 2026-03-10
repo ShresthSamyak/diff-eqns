@@ -24,18 +24,10 @@ So we **decompose the fraction into simpler parts**.
 
 ## 2. Basic Idea
 
-If the denominator factors as
+If the denominator factors as $(s-a)(s-b)$, we write:
 
 $$
-(s-a)(s-b)
-$$
-
-we write
-
-$$
-\frac{P(s)}{(s-a)(s-b)}
-=
-\frac{A}{s-a} + \frac{B}{s-b}
+\frac{P(s)}{(s-a)(s-b)} = \frac{A}{s-a} + \frac{B}{s-b}
 $$
 
 Then we solve for constants $A$ and $B$.
@@ -61,9 +53,7 @@ $$
 ### Step 2: Write partial fractions
 
 $$
-\frac{2s-5}{(s-3)(s+3)}
-=
-\frac{A}{s-3} + \frac{B}{s+3}
+\frac{2s-5}{(s-3)(s+3)} = \frac{A}{s-3} + \frac{B}{s+3}
 $$
 
 ---
@@ -133,9 +123,7 @@ $$
 ### Step 1: Write decomposition
 
 $$
-\frac{1}{s^2(s+3)}
-=
-\frac{A}{s} + \frac{B}{s^2} + \frac{C}{s+3}
+\frac{1}{s^2(s+3)} = \frac{A}{s} + \frac{B}{s^2} + \frac{C}{s+3}
 $$
 
 ---

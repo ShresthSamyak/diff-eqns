@@ -61,8 +61,7 @@ $$u_1' y_1' + u_2' y_2' = R(x)$$
 # Step 4 — Wronskian
 
 Compute the **Wronskian**:
-$$W = \begin{vmatrix} y_1 & y_2 \\ y_1' & y_2' \end{vmatrix}$$
-
+$$W = y_1 y_2' - y_2 y_1'$$
 
 ---
 
@@ -77,8 +76,8 @@ $$u_2' = \frac{y_1 R(x)}{W}$$
 # Step 6 — Integrate
 
 Find:
-$$u_1 = \int u_1' dx$$
-$$u_2 = \int u_2' dx$$
+$$u_1 = \int u_1' \, dx$$
+$$u_2 = \int u_2' \, dx$$
 
 ---
 
@@ -98,10 +97,10 @@ $$y = y_c + y_p$$
 
 | Quantity | Formula |
 | :--- | :--- |
-| Wronskian | $W = y_1y_2' - y_2y_1'$ |
-| $u_1'$ | $-y_2R(x)/W$ |
-| $u_2'$ | $y_1R(x)/W$ |
-| particular solution | $y_p = u_1y_1 + u_2y_2$ |
+| Wronskian | $W = y_1 y_2' - y_2 y_1'$ |
+| $u_1'$ | $-y_2 R(x) / W$ |
+| $u_2'$ | $y_1 R(x) / W$ |
+| Particular solution | $y_p = u_1 y_1 + u_2 y_2$ |
 
 ---
 
