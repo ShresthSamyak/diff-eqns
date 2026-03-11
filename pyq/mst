@@ -1,0 +1,202 @@
+
+
+## Roll Number: __________________________
+Thapar Institute of Engineering & Technology, Patiala
+Department of Mathematics
+Mid-Semester Test (MST)
+
+BE (Semester-I) (2024-25)                                                                       Course Code: UMA023
+Course Name: Differential Equations and Linear Algebra
+Oct 14 (Monday), 2024 Time – 2 hours; MM - 30
+Name of Faculty: Ankush Pathania, Dr Deepak Gumber, Dr Jatinderdeep Kaur, Dr
+## Mahesh Kumar Sharma, Dr Pankaj Narula, Dr Pramod Kumar Vaishnav
+
+Note:  (1) Attempt all questions in given order.
+(2) Attempt all parts of each question at one place.
+(3) Scientific calculator is not allowed
+
+Q. No. Questions Marks CO  BL
+1(a)  Determine the general solution of the differential equation
+## 푥
+## ଶ
+## ௗ
+## మ
+## ௬
+## ௗ௫
+## మ
+## +푥
+## ௗ௬
+## ௗ௫
+## +9푦=sin(3ln푥)+푥
+## ଶ
+## .
+Use the method of undetermined coefficients to find its particular solution.
+## 6   1   3
+1(b)  The motion of a cart attached horizontally to a wall by a coil spring is
+governed  by  the  differential  equation 푚
+## ௗ
+## మ
+## ௫
+## ௗ௧
+## మ
+## +푐
+## ௗ௫
+## ௗ௧
+## +푘푥=푓(푡).  Here 푥
+represents the displacement of the cart at any time 푡, 푚 is the mass of the
+cart, 푐 is the damping constant, 푘 is the spring constant and 푓
+## (
+## 푡
+## )
+is the
+external impressed force.  If the external force is zero, then determine the
+position of the cart at any time 푡 when 푚=1, 푐=5  and 푘=6 .
+## 2   1   3
+2(a)  Use the operator method to find the general solution of the differential
+equation
+## ௗ
+## మ
+## ௬
+## ௗ௫
+## మ
+## +2
+## ௗ௬
+## ௗ௫
+## +푦=2푥
+## ଶ
+## 푒
+## ିଶ௫
+## +푒
+## ଷ௫
+## .
+## 5   1   3
+## 2(b)  Given 푦
+## ଵ
+=sin푥−cos푥 and 푦
+## ଶ
+## =
+## (
+cos푥−sin푥
+## )
+## 2
+## ⁄
+are two solutions of a
+second order linear homogeneous differential equation. Can 푐
+## ଵ
+## 푦
+## ଵ
+## +푐
+## ଶ
+## 푦
+## ଶ
+
+## (where 푐
+## ଵ
+## ,푐
+## ଶ
+are arbitrary constants) be the general solution of the
+differential equation? Justify your answer.
+## 2   1   2
+## 3   Given 푦
+## ଵ
+=푥 is one solution of the homogeneous differential equation
+## 푥
+## ଶ
+## 푦
+## ᇱᇱ
+## −푥(푥+2)푦
+## ᇱ
+## +(푥+2)푦=0.
+Use this solution to obtain another solution 푦
+## ଶ
+and hence the general
+solution of this differential equation. Also determine the general solution of
+the nonhomogeneous differential equation
+## 푥
+## ଶ
+## 푦
+## ᇱᇱ
+## −푥(푥+2)푦
+## ᇱ
+## +(푥+2)푦=푥
+## ଷ
+## 푒
+## ௫
+## .
+by the method of variation of parameters.
+## 5   1   3
+## 4(a)
+Use the definition to find the Laplace transform of 푓
+## (
+## 푡
+## )
+## =൜
+## 0,   0<푡<1
+## 푒
+## ଷ௧
+## ,          푡≥1
+## .
+## 2   2   2
+## 4(b)
+Show that
+## ∫
+## 푒
+## ିସ௧
+## ୱ୧୬ସ௧
+## ௧
+## 푑푡=
+## గ
+## ସ
+## ஶ
+## ଴
+by using the concept of Laplace transform.
+## 3   2   3
+4(c)  Determine the Laplace transform of the following functions:
+## (i) 푓
+## (
+## 푡
+## )
+## =
+## ∫
+## 푒
+## ିହ௧
+## 푡cos3푡 푑푡
+## ௧
+## ଴
+## .               (ii) 푓
+## (
+## 푡
+## )
+## =푡
+## ସ
+## +
+## √
+## 푡.
+## 3+2   2   3
+
+## END
+
+
+
+
+
+
+
+## 4
+## 26
+## 0
+Bloom's Level wise Marks
+## Distribution
+Level 2Level 3Level 4
+## 20
+## 10
+## 00
+## 0
+## 5
+## 10
+## 15
+## 20
+## 25
+## CO1CO2CO3CO4
+Course Outcome wise Marks
+## Distribution
